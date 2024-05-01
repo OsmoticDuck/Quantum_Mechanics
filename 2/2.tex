@@ -103,9 +103,6 @@
     [L_i,L_j]=\varepsilon_{ijk}i\hbar L_k
 \end{align}
 
-\end{enumerate}
-
-\begin{enumerate}
 \item[(b)]
 
 \begin{align}
@@ -121,11 +118,6 @@
 &=-i\hbar(L_2L_3+L_3L_2)+i\hbar(L_3L_2+L_2L_3)=0
 \end{align}
 
-\end{enumerate}
-
-\newpage
-
-\begin{enumerate}
 \item[(c)]
 
 \begin{align}
@@ -157,51 +149,32 @@ x_1p_2-x_2p_1
     (\vec{L}\times\vec{L})_l=\sum_{m,n}\varepsilon_{lmn}L_mL_n=\varepsilon_{lmn}(L_mL_n-L_nL_m)=\varepsilon_{lmn}[L_m,L_n]=i\hbar L_l
 \end{align}
 
-\end{enumerate}
-
-\begin{enumerate}
 \item[(d)]
 
 \begin{align}
-[\frac{p^2}{2m},x_i]&=\frac{1}{2m}[p^2,x_i]\\
-&=\frac{1}{2m}[p_1^2+p_2^2+p_3^2,x_i]\\
-&=\frac{1}{2m}[p_i^2,x_i]\\
-&=\frac{1}{2m}(p_i[p_i,x_i]+[p_i,x_i]p_i)\\
-&=\frac{1}{2m}(p_i(-i\hbar)-i\hbar p_i)\\
-&=\frac{-i\hbar}{m}p_i
+    [\frac{p^2}{2m},x_i]&=\frac{1}{2m}[p^2,x_i]\\
+    &=\frac{1}{2m}[p_1^2+p_2^2+p_3^2,x_i]\\
+    &=\frac{1}{2m}[p_i^2,x_i]\\
+    &=\frac{1}{2m}(p_i[p_i,x_i]+[p_i,x_i]p_i)\\
+    &=\frac{1}{2m}(p_i(-i\hbar)-i\hbar p_i)\\
+    &=\frac{-i\hbar}{m}p_i
 \end{align}
 
 \begin{align}
-f(x)&=\sum_n a_n x^n\\
-f(\hat{x})=\sum_n a_n \hat{x}^n
-\end{align}
-
-therefore,
-\begin{align}
-[f(\hat{x}),p_1]&=[\sum_n a_n \hat{x}^n,p_1]\\
-&=\sum_n a_n [x_1^n,p_1]
+    [V(x),p_i]=?
 \end{align}
 
 \begin{align}
-[x_1,p_1]&=i\hbar\\
-[x_1^2,p_1]&=2i\hbar x_1\\
-[x_1^n,p_1]&=ni\hbar x_1^{n-1}\\
-[x_1^{n+1},p_1]&=[x_1\cdot x_1^n,p_1]=x_1[x_1^n,p_1]+[x_1,p_1]x_1^n=ni\hbar x_1^n+i\hbar x_1^n=(n+1)i\hbar x^n
+    [L_1,x_1]=[x_2p_3-x_3p_2,x_1]=0
 \end{align}
 
-\newpage
-
-therefore,
 \begin{align}
-&=\sum_n a_nni\hbar x_1^{n-1}\\
-f(\hat{x}_1)&=\sum_n a_n\hat{x}_1^n
-\end{align}
-
-and
-\begin{align}
-[\hat{x}_1,f(\hat{x}_1)]&=i\hbar f'(\hat{p}_1)\\
-[f(\hat{x}_1),\hat{p}_1]&=i\hbar f'(\hat{x}_1)\\
-[V(\hat{\vec{r}}),\hat{p}_i]&=i\hbar\frac{\partial V}{\partial \hat{x}_i}
+    [L_1,x_2]
+    &=[x_2p_3-x_3p_2,x_2]\\
+    &=[x_2p_3,x_2]-[x_3p_2,x_2]\\
+    &=x_2[p_3,x_2]+[x_2,x_2]p_3-(x_3[p_2,x_2]+[x_3,x_2]p_2)\\
+    &=-x_3[p_2,x_2]\\
+    &=i\hbar x_3
 \end{align}
 
 \end{enumerate}
@@ -214,58 +187,54 @@ and
 \item[(a)]
 
 \begin{align}
-\psi(x,0)=Ae^{ik_0x}e^{\frac{-x^2}{2b^2}}
+    \psi(x,0)=Ae^{ik_0x}e^{\frac{-x^2}{2b^2}}
 \end{align}
 
 \begin{align}
-\rho(x,0)=|\psi(x,0)|^2
+    \rho(x,0)=|\psi(x,0)|^2
 \end{align}
-is the density of the wave function
+is the probability density of the wave function
 
 \begin{align}
-\rho(x,0)dx
+    \rho(x,0)dx
 \end{align}
 is the probability to find the particle in $(x,x+dx)$
 
 therefore,
-\begin{align}
-1&=\int_{-\infty}^\infty\rho(x,0)dx\\
-&=A^2\int e^{-\frac{x^2}{2b^2}}dx\\
-(u=\frac{x}{b})&=A^2b\int e^{-u^2}du\\
-&=A^2b\sqrt{\pi}\\
-\Rightarrow A&=\frac{1}{\sqrt{b\sqrt{\pi}}}
+    \begin{align}
+    1&=\int_{-\infty}^\infty\rho(x,0)dx\\
+    &=A^2\int e^{-\frac{x^2}{2b^2}}dx\\
+    (u=\frac{x}{b})&=A^2b\int e^{-u^2}du\\
+    &=A^2b\sqrt{\pi}\\
+    \Rightarrow A&=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}
 \end{align}
 
-\end{enumerate}
-
-\begin{enumerate}
 \item[(b)]
 
 \begin{align}
-\psi(x,0)&=\frac{1}{2\pi}\int dk e^{ikx}\tilde{\psi}(k)\\
-\tilde{\psi}(k)&=\int dx e^{-ikx}\psi(x,0)
+    \tilde{\psi}(k)&=\int^\infty_{-\infty} dx e^{-ikx}\psi(x,0)
 \end{align}
 
 \begin{align}
-\tilde{\psi}(k)&=A\int e^{-ikx-ik_0x}e^{-\frac{x^2}{2b^2}}\\
-\tilde{\psi}(k)&=\sqrt{2b\sqrt{\pi}}e^{\frac{-b^2}{2}(k-k_0)^2}
+    \tilde{\psi}(k)
+    &=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}\int^\infty_{-\infty} dx e^{-ikx}e^{ik_0x}e^{\frac{-x^2}{2b^2}}\\
+    &=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}\int^\infty_{-\infty} dx \exp{\bigg[i(k_0-k)x-\frac{x^2}{2b^2}\bigg]}\\
+    &=
 \end{align}
 
-\end{enumerate}
-
-\begin{enumerate}
 \item[(c)]
 
-Set potential of $e$ in (b) equal to $-1$
+\begin{align}
+    \frac{1}{e}=e^{-1}
+\end{align}
 
-\end{enumerate}
-
-\begin{enumerate}
 \item[(d)]
 
 \begin{align}
-\psi(x,t)=\frac{\sqrt{b}}{\pi^{\frac{1}{4}}}\frac{e^{\frac{-b^2k_0^2}{2}}}{\sqrt{b^2+\frac{i\hbar t}{m}}}e^{\frac{(b^2k_0+ix)^2}{2(b^2+\frac{i\hbar t}{m})}}
+    \psi(x,t)=\int^\infty_{-\infty} \frac{dk}{2\pi}\exp{\bigg[i\bigg(kx-\frac{\hbar k^2}{2m}t\bigg)\bigg]}\tilde{\psi}(k)
 \end{align}
+
+\item[(e)]
 
 \end{enumerate}
 
