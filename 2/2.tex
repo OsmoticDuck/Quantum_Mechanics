@@ -1,0 +1,272 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{afterpage}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{mathtools}
+%\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{mahjong}
+\usepackage{amsthm}
+\usepackage{chngcntr}
+\usepackage{tikz}
+
+\usepackage{stmaryrd}
+\let\stmaryrdLightning\lightning
+
+\author{Zehao Gao}
+
+\begin{document}
+
+%\input{aufgaben_23_02.pdf}
+
+\section*{Homework 2 solutions}
+
+\paragraph*{Question 3}
+
+\begin{enumerate}
+\item[(a)]
+
+\begin{equation}
+    \vec{x}=
+    \begin{pmatrix}
+    x_1 \\
+    x_2 \\
+    x_3
+    \end{pmatrix},\ 
+    \vec{p}=
+    \begin{pmatrix}
+    p_1 \\
+    p_2 \\
+    p_3
+    \end{pmatrix}
+\end{equation}
+
+\begin{equation}
+    \hat{\vec{L}}=\hat{\vec{x}}\times\hat{\vec{p}}=\cdots
+\end{equation}
+
+\begin{align}
+    [\hat{L}_1,\hat{L}_2]&=[x_2p_3-x_3p_2,x_3p_1-x_1p_3]\\
+    [A+B,C+D]&=[A+B,C]+[A+B,D]\\
+    &=[A,C]+[B,C]+[A,D]+[B,D]\\
+    \Rightarrow
+    [L_1,L_2]&=\underset{\mbox{I}}{[x_2p_3,x_3p_1]}-\underset{\mbox{II}}{[x_3p_2,x_3p_1]}-\underset{\mbox{III}}{[x_2p_3,x_1p_3]}+\underset{\mbox{IV}}{[x_3p_2,x_1p_3]}
+\end{align}
+
+\begin{align}
+    [A,BC]&=B[A,C]+[A,B]C \\
+    [AB,C]&=A[B,C]+[A,C]B
+\end{align}
+
+\begin{align}
+    [x_i,p_j]=i\hbar\delta_{ij},\ [p_i,x_j]=-i\hbar\delta_{ij}
+\end{align}
+
+\begin{align}
+    [x_i,x_j]=[p_i,p_j]=0
+\end{align}
+
+\begin{align}
+    \mbox{I}
+    &=[x_2p_3,x_3]p_1+x_3[x_2p_2,p_1]\\
+    &=[x_2,x_3]p_3p_1+x_2[p_3,x_3]p_1+x_3[x_2,p_1]p_3+x_2x_3[p_3,p_1]\\
+    &=-i\hbar x_2p_1\\
+    \mbox{II}
+    &=[x_3p_2,x_3]p_1+x_3[x_3p_2,p_1]\\
+    &=x_3[p_2,x_3]p_1++[x_3,x_3]p_1p_2+x_3x_3[p_2,p_1]+x_3[x_3,p_1]p_2\\
+    &=0\\
+    \mbox{III}
+    &=[x_2p_3,x_1]p_3+x_1[x_2p_3,p_3]=0\\
+    \mbox{IV}
+    &=[x_3p_2,x_1]p_3+x_1[x_3p_2,p_3]\\
+    &=[x_3,x_1]p_2p_3+x_3[p_2,x_1]p_3+x_1[x_3,p_3]p_2+x_1x_3[p_2,p_3]\\
+    &=i\hbar x_1p_2
+\end{align}
+
+\begin{align}
+    [L_1,L_2]&=i\hbar(x_1p_2-x_2p_1)=i\hbar L_3
+\end{align}
+
+\begin{align}
+    [L_i,L_j]=\varepsilon_{ijk}i\hbar L_k
+\end{align}
+
+\end{enumerate}
+
+\begin{enumerate}
+\item[(b)]
+
+\begin{align}
+    [\hat{\vec{L}}_1^2,\hat{L}_1]
+\end{align}
+
+\begin{align}
+    \hat{\vec{L}}^2&=\hat{L}_1^2+\hat{L}_2^2+\hat{L}_3^2\\
+    &=[L_1^2+L_2^2+L_3^2,L_1]=0\\
+    &=[L_2^2,L_1]+[L_3^2,L_1]\\
+    &=L_2[L_2,L_1]+[L_2,L_1]L_2+L_3[L_3,L_1]+[L_3,L_1]L_3\\
+        &=-i\hbar L_2L_3-i\hbar L_3L_2+i\hbar L_3L_2+i\hbar L_2L_3\\
+&=-i\hbar(L_2L_3+L_3L_2)+i\hbar(L_3L_2+L_2L_3)=0
+\end{align}
+
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}
+\item[(c)]
+
+\begin{align}
+    \vec{L}\times\vec{L}&=
+    \begin{bmatrix}
+    x_2p_3-x_3p_2 \\
+    x_3p_1-x_1p_3 \\
+    x_1p_2-x_2p_1
+    \end{bmatrix}
+    \times
+    \begin{bmatrix}
+x_2p_3-x_3p_2 \\
+x_3p_1-x_1p_3 \\
+x_1p_2-x_2p_1
+    \end{bmatrix}\\&=
+    \begin{bmatrix}
+    (x_3p_1-x_1p_3)(x_1p_2-x_2p_1)-(x_1p_2-x_2p_1)(x_3p_1-x_1p_3)\\
+    (x_1p_2-x_2p_1)(x_2p_3-x_3p_2)-(x_2p_3-x_3p_2)(x_1p_2-x_2p_1)\\
+    (x_2p_3-x_3p_2)(x_3p_1-x_1p_3)-(x_3p_1-x_1p_3)(x_2p_3-x_3p_2)
+    \end{bmatrix}\\&=
+    \begin{bmatrix}
+    [L_2,L_3] \\
+    [L_3,L_1] \\
+    [L_1,L_2]
+    \end{bmatrix}=0
+\end{align}
+
+\begin{align}
+    (\vec{L}\times\vec{L})_l=\sum_{m,n}\varepsilon_{lmn}L_mL_n=\varepsilon_{lmn}(L_mL_n-L_nL_m)=\varepsilon_{lmn}[L_m,L_n]=i\hbar L_l
+\end{align}
+
+\end{enumerate}
+
+\begin{enumerate}
+\item[(d)]
+
+\begin{align}
+[\frac{p^2}{2m},x_i]&=\frac{1}{2m}[p^2,x_i]\\
+&=\frac{1}{2m}[p_1^2+_2^2+p_3^2,x_i]\\
+&=\frac{1}{2m}[p_i^2,x_i]\\
+&=\frac{1}{2m}(p_i[p_i,x_i]+[p_i,x_i]p_i)\\
+&=\frac{1}{2m}(p_i(-i\hbar)-i\hbar p_i)\\
+&=\frac{-i\hbar}{m}p_i
+\end{align}
+
+\begin{align}
+f(x)&=\sum_n a_n x^n\\
+f(\hat{x})=\sum_n a_n \hat{x}^n
+\end{align}
+
+therefore,
+\begin{align}
+[f(\hat{x}),p_1]&=[\sum_n a_n \hat{x}^n,p_1]\\
+&=\sum_n a_n [x_1^n,p_1]
+\end{align}
+
+\begin{align}
+[x_1,p_1]&=i\hbar\\
+[x_1^2,p_1]&=2i\hbar x_1\\
+[x_1^n,p_1]&=ni\hbar x_1^{n-1}\\
+[x_1^{n+1},p_1]&=[x_1\cdot x_1^n,p_1]=x_1[x_1^n,p_1]+[x_1,p_1]x_1^n=ni\hbar x_1^n+i\hbar x_1^n=(n+1)i\hbar x^n
+\end{align}
+
+\newpage
+
+therefore,
+\begin{align}
+&=\sum_n a_nni\hbar x_1^{n-1}\\
+f(\hat{x}_1)&=\sum_n a_n\hat{x}_1^n
+\end{align}
+
+and
+\begin{align}
+[\hat{x}_1,f(\hat{x}_1)]&=i\hbar f'(\hat{p}_1)\\
+[f(\hat{x}_1),\hat{p}_1]&=i\hbar f'(\hat{x}_1)\\
+[V(\hat{\vec{r}}),\hat{p}_i]&=i\hbar\frac{\partial V}{\partial \hat{x}_i}
+\end{align}
+
+\end{enumerate}
+
+\newpage
+
+\paragraph{Question 4}
+
+\begin{enumerate}
+\item[(a)]
+
+\begin{align}
+\psi(x,0)=Ae^{ik_0x}e^{\frac{-x^2}{2b^2}}
+\end{align}
+
+\begin{align}
+\rho(x,0)=|\psi(x,0)|^2
+\end{align}
+is the density of the wave function
+
+\begin{align}
+\rho(x,0)dx
+\end{align}
+is the probability to find the particle in $(x,x+dx)$
+
+therefore,
+\begin{align}
+1&=\int_{-\infty}^\infty\rho(x,0)dx\\
+&=A^2\int e^{-\frac{x^2}{2b^2}}dx\\
+(u=\frac{x}{b})&=A^2b\int e^{-u^2}du\\
+&=A^2b\sqrt{\pi}\\
+\Rightarrow A&=\frac{1}{\sqrt{b\sqrt{\pi}}}
+\end{align}
+
+\end{enumerate}
+
+\begin{enumerate}
+\item[(b)]
+
+\begin{align}
+\psi(x,0)&=\frac{1}{2\pi}\int dk e^{ikx}\tilde{\psi}(k)\\
+\tilde{\psi}(k)&=\int dx e^{-ikx}\psi(x,0)
+\end{align}
+
+\begin{align}
+\tilde{\psi}(k)&=A\int e^{-ikx-ik_0x}e^{-\frac{x^2}{2b^2}}\\
+\tilde{\psi}(k)&=\sqrt{2b\sqrt{\pi}}e^{\frac{-b^2}{2}(k-k_0)^2}
+\end{align}
+
+\end{enumerate}
+
+\begin{enumerate}
+\item[(c)]
+
+Set potential of $e$ in (b) equal to $-1$
+
+\end{enumerate}
+
+\begin{enumerate}
+\item[(d)]
+
+\begin{align}
+\psi(x,t)=\frac{\sqrt{b}}{\pi^{\frac{1}{4}}}\frac{e^{\frac{-b^2k_0^2}{2}}}{\sqrt{b^2+\frac{i\hbar t}{m}}}e^{\frac{(b^2k_0+ix)^2}{2(b^2+\frac{i\hbar t}{m})}}
+\end{align}
+
+\end{enumerate}
+
+\end{document}
