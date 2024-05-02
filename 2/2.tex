@@ -226,16 +226,16 @@ therefore,
     &=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}\int^\infty_{-\infty} dx \exp{\bigg[-\frac{1}{2b^2}\Big(x^2+2b^2i(k-k_0)x-b^4(k-k_0)^2\Big)-\frac{b^2}{2}(k-k_0)^2\bigg]}\\
     &=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}\int^\infty_{-\infty} dx \exp{\bigg[-\frac{1}{2b^2}\Big(x+b^2i(k-k_0)\Big)^2-\frac{b^2}{2}(k-k_0)^2\bigg]}\\
     &=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}e^{-\frac{b^2}{2}(k-k_0)^2}\int^\infty_{-\infty} dx \exp{\bigg[-\frac{1}{2b^2}\Big(x+b^2i(k-k_0)\Big)^2\bigg]}\\
-    &=Ae^{-\frac{b^2}{2}(k-k_0)^2}\frac{1}{A}\int^\infty_{-\infty} dx' \Bigg(A^2\exp{\bigg[-\frac{x'^2}{b^2}\bigg]}\Bigg)^\frac{1}{2}\\
-    &=e^{-\frac{b^2}{2}(k-k_0)^2}\int^\infty_{-\infty} dx' \sqrt{\rho(x',0)}\\
-    &=e^{-\frac{b^2}{2}(k-k_0)^2}\int^\infty_{-\infty} dx' |\psi(x',0)|\\
-    &=
+    &=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}e^{-\frac{b^2}{2}(k-k_0)^2}\int^\infty_{-\infty} dx' \exp{\bigg[-\frac{x'^2}{2b^2}\bigg]}\\
+    &=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}e^{-\frac{b^2}{2}(k-k_0)^2}\sqrt{2b}\int^\infty_{-\infty} dx'' \exp{[-x''^2]}\\
+    &=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}e^{-\frac{b^2}{2}(k-k_0)^2}\sqrt{2b\pi}\\
+    &=\sqrt{2b\sqrt{\pi}}e^{-\frac{b^2}{2}(k-k_0)^2}
 \end{align}
 
 \item[(c)]
 
 \begin{align}
-    (\tilde{\psi}(k))^2&=e^{-b^2(k-k_0)^2}\tilde{\psi}_0^2\\
+    (\tilde{\psi}(k))^2&=e^{-b^2(k-k_0)^2}2b\sqrt{\pi}\\
     \Rightarrow e^{-1}&=e^{-b^2(k-k_0)^2}\\
     -1&=-b^2(k-k_0)^2\\
     \frac{1}{b}&=|k-k_0|=\frac{1}{2}\Delta k
@@ -244,7 +244,15 @@ therefore,
 \item[(d)]
 
 \begin{align}
-    \psi(x,t)=\int^\infty_{-\infty} \frac{dk}{2\pi}\exp{\bigg[i\bigg(kx-\frac{\hbar k^2}{2m}t\bigg)\bigg]}\tilde{\psi}(k)
+    \psi(x,t)
+    &=\int^\infty_{-\infty} \frac{dk}{2\pi}\exp{\bigg[i\Big(kx-\frac{\hbar k^2}{2m}t\Big)\bigg]}\tilde{\psi}(k)\\
+    &=\int^\infty_{-\infty} \frac{dk}{2\pi}\exp{\bigg[i\Big(kx-\frac{\hbar k^2}{2m}t\Big)\bigg]}\sqrt{2b\sqrt{\pi}}e^{-\frac{b^2}{2}(k-k_0)^2}\\
+    &=\frac{\sqrt{2b\sqrt{\pi}}}{2\pi}\int^\infty_{-\infty} dk\exp{\bigg[i\Big(kx-\frac{\hbar k^2}{2m}t\Big)-\frac{b^2}{2}(k-k_0)^2\bigg]}\\
+    &=\frac{\sqrt{2b\sqrt{\pi}}}{2\pi}\int^\infty_{-\infty} dk\exp{\bigg[ikx-\frac{\hbar k^2}{2m}it-\frac{b^2}{2}k^2+b^2kk_0-\frac{b^2}{2}k_0^2\bigg]}\\
+    &=\frac{\sqrt{2b\sqrt{\pi}}}{2\pi}e^{-\frac{b^2}{2}k_0^2}\int^\infty_{-\infty} dk\exp{\bigg[ikx-\frac{\hbar k^2}{2m}it-\frac{b^2}{2}k^2+b^2kk_0\bigg]}\\
+    &=\frac{\sqrt{2b\sqrt{\pi}}}{2\pi}e^{-\frac{b^2}{2}k_0^2}\int^\infty_{-\infty} dk\exp{\bigg[k(ix+b^2k_0)+k^2\Big(-\frac{\hbar}{2m}it-\frac{b^2}{2}\Big)\bigg]}\\
+    &=\frac{\sqrt{2b\sqrt{\pi}\pi}}{2\pi}e^{-\frac{b^2}{2}k_0^2}\frac{1}{\sqrt{\frac{\hbar}{2m}it+\frac{b^2}{2}}}\exp{\bigg[\frac{(ix+b^2k_0)^2}{4(\frac{\hbar}{2m}it+\frac{b^2}{2})}\bigg]}\\
+    &=\frac{\sqrt{b}}{\sqrt{\pi}\sqrt{\frac{\hbar}{m}it+b^2}}\exp{\bigg[\frac{(ix+b^2k_0)^2}{2(\frac{\hbar}{m}it+b^2)}-\frac{b^2}{2}k_0^2\bigg]}
 \end{align}
 
 \item[(e)]
