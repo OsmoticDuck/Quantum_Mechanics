@@ -161,7 +161,11 @@ x_1p_2-x_2p_1
 \end{align}
 
 \begin{align}
-    [V(x),p_i]=?
+    [V(x),p_i]\psi
+    &=(V(-i\hbar\partial_{x_i})-(-i\hbar\partial_{x_i})V)\psi\\
+    &=V(-i\hbar)\partial_{x_i}\psi-(-i\hbar)\partial_{x_i}(V\psi)\\
+    &=V(-i\hbar)\partial_{x_i}\psi-V(-i\hbar)\partial_{x_i}\psi-(-i\hbar)(\partial_{x_i}V)\psi\\
+    &=\underset{[V(x),p_i]}{\underbrace{i\hbar(\partial_{x_i}V)}}\psi
 \end{align}
 
 \begin{align}
@@ -191,7 +195,7 @@ x_1p_2-x_2p_1
 \end{align}
 
 \begin{align}
-    \rho(x,0)=|\psi(x,0)|^2
+    \rho(x,0)=|\psi(x,0)|^2=\psi^*\psi
 \end{align}
 is the probability density of the wave function
 
@@ -203,7 +207,7 @@ is the probability to find the particle in $(x,x+dx)$
 therefore,
     \begin{align}
     1&=\int_{-\infty}^\infty\rho(x,0)dx\\
-    &=A^2\int e^{-\frac{x^2}{2b^2}}dx\\
+    &=A^2\int e^{-\frac{x^2}{b^2}}dx\\
     (u=\frac{x}{b})&=A^2b\int e^{-u^2}du\\
     &=A^2b\sqrt{\pi}\\
     \Rightarrow A&=\frac{1}{\sqrt{b}\sqrt[4]{\pi}}
