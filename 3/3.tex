@@ -5,7 +5,7 @@
 \usepackage{xunicode}
 \usepackage{xltxtra}
 \usepackage{polyglossia}
-\usepackage{amsmath}
+\usepackage{eqnarray,amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -21,7 +21,10 @@
 \usepackage{amsthm}
 \usepackage{chngcntr}
 \usepackage{tikz}
+\usepackage{xfrac}
 
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
 \usepackage{stmaryrd}
 \let\stmaryrdLightning\lightning
 
@@ -34,7 +37,130 @@
 \paragraph*{Question 3}
 
 \begin{enumerate}
+
 \item[(a)]
+
+    Wave function given by
+    \begin{equation}
+        \psi(x,t)=\phi(x)e^{-iE\sfrac{t}{\hbar}}
+    \end{equation}
+
+    insert into Schroedinger equation
+    \begin{equation}
+        i\hbar\frac{\partial}{\partial t}\psi=\bigg(-\frac{\hbar^2}{2m}\nabla^2+V\bigg)\psi
+    \end{equation}
+
+    we get 
+    \begin{eqnarray}
+            i\hbar\frac{\partial}{\partial t}\phi(x)e^{-iE\sfrac{t}{\hbar}}
+            &=&\bigg(-\frac{\hbar^2}{2m}\nabla^2+V\bigg)\phi(x)e^{-iE\sfrac{t}{\hbar}}\\
+            E\phi(x)e^{-iE\sfrac{t}{\hbar}}
+            &=&\bigg(-\frac{\hbar^2}{2m}\frac{\partial^2\phi(x)}{\partial x^2}+V\phi(x)\bigg)e^{-iE\sfrac{t}{\hbar}}\\
+            E\phi(x)
+            &=&-\frac{\hbar^2}{2m}\frac{\partial^2\phi(x)}{\partial x^2}+V\phi(x)\\
+            V
+            &=&E+\frac{1}{\phi(x)}\frac{\hbar^2}{2m}\frac{\partial^2\phi(x)}{\partial x^2}
+    \end{eqnarray}
+
+\item[(b)]
+
+    For gven function
+    \begin{equation}
+        \phi(x)=Ne^{\sfrac{-x^2}{2\sigma^2}}
+    \end{equation}
+
+    the potential is therefore
+    \begin{eqnarray}
+        V(x)
+        &=&E+\frac{1}{Ne^{\sfrac{-x^2}{2\sigma^2}}}\frac{\hbar^2}{2m}\frac{\partial^2Ne^{\sfrac{-x^2}{2\sigma^2}}}{\partial x^2}\\
+        &=&E+\frac{1}{Ne^{\sfrac{-x^2}{2\sigma^2}}}\frac{\hbar^2}{2m}\frac{x^2-\sigma^2}{\sigma^4}Ne^{\sfrac{-x^2}{2\sigma^2}}\\
+        &=&E+\frac{\hbar^2}{2m}\frac{x^2-\sigma^2}{\sigma^4}
+    \end{eqnarray}
+
+\item[(c)]
+    For gven function
+    \begin{equation}
+        \phi(x)=Ne^{\sfrac{-x}{2l}}
+    \end{equation}
+
+    the potential is therefore
+    \begin{eqnarray}
+        V(x)
+        &=&E+\frac{1}{Ne^{\sfrac{-x}{2l}}}\frac{\hbar^2}{2m}\frac{\partial^2Ne^{\sfrac{-x}{2l}}}{\partial x^2}\\
+        &=&E+\frac{1}{Ne^{\sfrac{-x^2}{2\sigma^2}}}\frac{\hbar^2}{2m}\frac{1}{4l^2}Ne^{\sfrac{-x^2}{2\sigma^2}}\\
+        &=&E+\frac{\hbar^2}{8ml^2}\\
+    \end{eqnarray}
+
+\end{enumerate}
+
+\newpage
+
+\paragraph*{Question 4}
+
+\begin{enumerate}
+
+\item[(a)]
+
+    To show whether a wave function $\psi$ is normalized, we have to find out if the following intergal of probability amplitude $\rho=|\psi|^2$ is equal to one:
+
+    \begin{equation}
+        \int_{-\infty}^{\infty}\rho dx
+    \end{equation}
+
+    with wave function given by
+    \begin{equation}
+        \psi(x)=\frac{1}{\sqrt{L}}\theta\bigg(\frac{L}{2}-|x|\bigg)
+    \end{equation}
+
+    therefore we have
+    \begin{equation}
+        \rho(x)=|\psi(x)|^2=\frac{1}{L}\theta\bigg(\frac{L}{2}-|x|\bigg)
+    \end{equation}
+
+    since $(\theta(\xi))^2=\theta(\xi)$, and thus the integral is
+    \begin{eqnarray}
+        &&\frac{1}{L}\int_{-\infty}^{\infty}\theta\bigg(\frac{L}{2}-|x|\bigg) dx\\
+        &=&\frac{1}{L}L\\
+        &=&1
+    \end{eqnarray}
+
+    \item[(b)]
+    \begin{equation}
+        \bra x \ket=\bra \psi | \hat{x} | \psi \ket=\int_{-\infty}^{\infty}\psi^*x\psi dx=\int_{-\infty}^{\infty}x|\psi|^2 dx
+    \end{equation}
+
+    with wave function given by
+    \begin{equation}
+        \psi(x)=\frac{1}{\sqrt{L}}\theta\bigg(\frac{L}{2}-|x|\bigg)
+    \end{equation}
+
+    we get 
+    \begin{equation}
+        \bra x \ket=\frac{1}{L}\int_{-\infty}^{\infty}x\theta\bigg(\frac{L}{2}-|x|\bigg)dx=0
+    \end{equation}
+
+    similaraly we have
+    \begin{equation}
+        \bra x^2 \ket
+        =\frac{1}{L}\int_{-\infty}^{\infty}x^2\theta\bigg(\frac{L}{2}-|x|\bigg)dx
+        =\frac{L^2}{12}
+    \end{equation}
+
+    and
+    \begin{equation}
+        \Delta x=\sqrt{\bra x^2 \ket-\bra x \ket}=\sqrt{\frac{x^2}{12}}=\frac{\sqrt{3}}{6}L
+    \end{equation}
+
+    \item[(c)]
+    
+    \begin{eqnarray}
+        \tilde{\psi}(x)
+        &=&\int_{-\infty}^{\infty}e^{\sfrac{-ipx}{\hbar}}\psi(x)dx\\
+        &=&\int_{-\infty}^{\infty}e^{\sfrac{-ipx}{\hbar}}\frac{1}{\sqrt{L}}\theta\bigg(\frac{L}{2}-|x|\bigg)dx\\
+        &=&\frac{1}{\sqrt{L}}\int_{-\sfrac{L}{2}}^{\sfrac{L}{2}}e^{\sfrac{-ipx}{\hbar}}dx\\
+        &=&\frac{1}{\sqrt{L}}\bigg[\frac{e^{\sfrac{-ipx}{\hbar}}}{\sfrac{-ipx}{\hbar}}\bigg]_{-\sfrac{L}{2}}^{\sfrac{L}{2}}\\
+        &=&\frac{1}{\sqrt{L}}\bigg[\frac{e^{\sfrac{-ipL}{2\hbar}}}{\sfrac{-ipL}{2\hbar}}-\frac{-e^{\sfrac{ipL}{2\hbar}}}{\sfrac{-ipL}{2\hbar}}\bigg]\\
+    \end{eqnarray}
 
 \end{enumerate}
 
