@@ -158,9 +158,36 @@
         &=&\int_{-\infty}^{\infty}e^{\sfrac{-ipx}{\hbar}}\psi(x)dx\\
         &=&\int_{-\infty}^{\infty}e^{\sfrac{-ipx}{\hbar}}\frac{1}{\sqrt{L}}\theta\bigg(\frac{L}{2}-|x|\bigg)dx\\
         &=&\frac{1}{\sqrt{L}}\int_{-\sfrac{L}{2}}^{\sfrac{L}{2}}e^{\sfrac{-ipx}{\hbar}}dx\\
-        &=&\frac{1}{\sqrt{L}}\bigg[\frac{e^{\sfrac{-ipx}{\hbar}}}{\sfrac{-ipx}{\hbar}}\bigg]_{-\sfrac{L}{2}}^{\sfrac{L}{2}}\\
-        &=&\frac{1}{\sqrt{L}}\bigg[\frac{e^{\sfrac{-ipL}{2\hbar}}}{\sfrac{-ipL}{2\hbar}}-\frac{-e^{\sfrac{ipL}{2\hbar}}}{\sfrac{-ipL}{2\hbar}}\bigg]\\
+        &=&\frac{1}{\sqrt{L}}\bigg[\frac{e^{\sfrac{-ipx}{\hbar}}}{\sfrac{-ip}{\hbar}}\bigg]_{-\sfrac{L}{2}}^{\sfrac{L}{2}}\\
+        &=&\frac{1}{\sqrt{L}}\bigg[\frac{e^{\sfrac{-ipL}{2\hbar}}}{\sfrac{-ip}{\hbar}}-\frac{e^{\sfrac{ipL}{2\hbar}}}{\sfrac{-ip}{\hbar}}\bigg]\\
+        &=&\frac{\hbar}{-ip\sqrt{L}}(e^{\sfrac{-ipL}{2\hbar}}-e^{\sfrac{ipL}{2\hbar}})\\
+        &=&\frac{2\hbar}{p\sqrt{L}}\sin\bigg(\frac{pL}{2\hbar}\bigg)
     \end{eqnarray}
+
+    \item[(d)]
+    
+    The expectation value of momentum is given by
+    \begin{eqnarray}
+        \bra p \ket
+        &=&\int_{-\infty}^{\infty}\tilde{\psi}^*(p)p\tilde{\psi}(p)dp\\
+        &=&\frac{4\hbar^2}{L}\int_{-\infty}^{\infty}\frac{1}{p}\sin^2\bigg(\frac{pL}{2\hbar}\bigg)dp\\
+        &=&0
+    \end{eqnarray}
+
+    \item[(e)]
+
+    \begin{eqnarray}
+        \bra p^2 \ket
+        &=&\int_{-\infty}^{\infty}\tilde{\psi}^*(p)p^2\tilde{\psi}(p)dp\\
+        &=&\frac{4\hbar^2}{L}\int_{-\infty}^{\infty}\sin^2\bigg(\frac{pL}{2\hbar}\bigg)dp\\
+        &=&\infty
+    \end{eqnarray}
+
+    therefore
+
+    \begin{equation}
+        \Delta p=\infty
+    \end{equation}
 
 \end{enumerate}
 
