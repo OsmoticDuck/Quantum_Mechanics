@@ -1,0 +1,61 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{eqnarray,amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{afterpage}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{mathtools}
+%\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{mahjong}
+\usepackage{amsthm}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{xfrac}
+
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\usepackage{stmaryrd}
+\let\stmaryrdLightning\lightning
+
+\author{Zehao Gao}
+
+\begin{document}
+
+\section*{Homework 4 solutions}
+
+\paragraph*{Question 3}
+
+\begin{enumerate}
+
+\item[(a)]
+
+    Time-independent Schroedinger equation
+    \begin{equation} 
+        E\psi=\bigg(-\frac{\hbar^2}{2m}\nabla^2+V\bigg)\psi
+    \end{equation}
+
+    with potential given by
+    \begin{equation}
+        V(x)=-\eta\delta(x),\ \eta>0
+    \end{equation}
+
+    therefore
+    \begin{eqnarray} 
+        \int E\psi(x)dx&=&\int -\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\psi dx+\int -\eta\delta(x) dx \\
+        \int E\psi(x)dx&=&-\frac{\hbar^2}{2m}\int\frac{d^2}{dx^2}\psi dx-\eta\int\delta(x) dx \\
+    \end{eqnarray}
+
+\end{enumerate}
+
+\end{document}
