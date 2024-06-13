@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{eqnarray,amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{afterpage}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{mathtools}
+%\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{mahjong}
+\usepackage{amsthm}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{xfrac}
+
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\usepackage{stmaryrd}
+\let\stmaryrdLightning\lightning
+
+\author{Zehao Gao}
+
+\begin{document}
+
+\section*{Homework 6 solutions}
+
+\paragraph*{Question 3}
+
+\begin{enumerate}
+
+\item[(a)]
+
+    Time-independent Schroedinger equation
+    \begin{equation} 
+        E\psi=\hat{H}\psi
+    \end{equation}
+
+    with Hamilton operator given by
+    \begin{equation}
+        \hat{H}=v\frac{\hbar}{i}\frac{d}{dx}+\frac{1}{2}m\omega^2x^2
+    \end{equation}
+
+    therefore
+    \begin{eqnarray} 
+        E\psi&=&v\frac{\hbar}{i}\frac{d}{dx}\psi+\frac{1}{2}m\omega^2x^2\psi \\
+        \frac{E}{\hbar v}\psi&=&-i\frac{d}{dx}\psi+\frac{m\omega^2}{2\hbar v}x^2\psi \\
+        \frac{1}{\lambda}\psi&=&-i\frac{d}{dx}\psi+\frac{1}{x^3_0}x^2\psi \\
+        \bigg(\frac{1}{\lambda}-\frac{1}{x^3_0}x^2\bigg)\psi+i\frac{d}{dx}\psi&=&0
+    \end{eqnarray}
+
+\item[(b)]
+
+    \begin{eqnarray}
+        \bigg(\frac{1}{\lambda}-\frac{1}{x^3_0}x^2\bigg)\psi+i\frac{d}{dx}\psi&=&0 \\
+        id\psi\frac{1}{\psi}&=&\bigg(\frac{1}{x^3_0}x^2-\frac{1}{\lambda}\bigg)dx \\
+        \ln{(\psi)}&=&-i\bigg(\frac{1}{3x^3_0}x^3-\frac{x}{\lambda}+C\bigg) \\
+        \psi&=&C'\exp{\bigg[-i\Big(\frac{1}{3x^3_0}x^3-\frac{x}{\lambda}\Big)\bigg]}
+    \end{eqnarray}
+
+\item[(c)]
+
+    
+
+\end{enumerate}
+
+\paragraph*{Question 4}
+
+\begin{enumerate}
+
+\item[(a)]
+
+    
+
+\item[(b)]
+
+\item[(c)]
+
+    
+
+\end{enumerate}
+
+\end{document}
