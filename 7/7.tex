@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{eqnarray,amsmath}
+\usepackage{bbold}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}   
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{afterpage}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{mathtools}
+%\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{mahjong}
+\usepackage{amsthm}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{xfrac}
+
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\usepackage{stmaryrd}
+\let\stmaryrdLightning\lightning
+
+\author{Zehao Gao}
+
+\begin{document}
+
+\section*{Homework 7 solutions}
+
+\paragraph*{Question 4}
+
+\begin{enumerate}
+
+\item[(a)]
+
+    \begin{eqnarray}
+        \hat{B}_j^\dag&=&(i\hat{A}_{2j-1}\hat{A}_{2j})^\dag \\
+        &=&-i\hat{A}_{2j}^\dag\hat{A}_{2j-1}^\dag \\
+        &=&-i\hat{A}_{2j}\hat{A}_{2j-1} \\
+        &=&i\hat{A}_{2j-1}\hat{A}_{2j}=\hat{B}_j
+    \end{eqnarray}
+    
+\item[(b)]
+
+    \begin{eqnarray}
+        \hat{B}_j^2&=&(i\hat{A}_{2j-1}\hat{A}_{2j})^2 \\
+        &=&-\hat{A}_{2j-1}\hat{A}_{2j}\hat{A}_{2j-1}\hat{A}_{2j} \\
+        &=&\hat{A}_{2j-1}\hat{A}_{2j-1}\hat{A}_{2j}\hat{A}_{2j} \\
+        &=&\hat{A}_{2j-1}^2\hat{A}_{2j}^2 \\
+        &=&\mathbb{1}\mathbb{1}=\mathbb{1}
+    \end{eqnarray}
+    
+\item[(c)]
+
+    \begin{eqnarray}
+        [\hat{B}_j,\hat{H}]&=&\hat{B}_j\hat{H}-\hat{H}\hat{B}_j \\
+        &=&i\hat{A}_{2j-1}\hat{A}_{2j}\hat{H}-i\hat{H}\hat{A}_{2j-1}\hat{A}_{2j}\\
+        &=&i\hat{A}_{2j-1}\hat{A}_{2j}\hat{H}-i\hat{A}_{2j-1}\hat{H}\hat{A}_{2j}\\
+        &=&i\hat{A}_{2j-1}(\hat{A}_{2j}\hat{H}-\hat{H}\hat{A}_{2j})\\
+        &=&i\hat{A}_{2j-1}([\hat{A}_{2j},\hat{H}])=0
+    \end{eqnarray}
+
+\item[(d)]
+
+    \begin{eqnarray}
+        \hat{H}\hat{A}|\psi\ket=\hat{A}\hat{H}|\psi\ket=\hat{A}E|\psi\ket=E\hat{A}|\psi\ket
+    \end{eqnarray}
+
+\item[(d)]
+
+    
+
+\end{enumerate}
+
+\end{document}
